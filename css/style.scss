@@ -1,0 +1,165 @@
+// CSS Reset -- Meyerweb
+@import 'reset';
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+// Variables
+$veryDarkBlue: hsl(233, 47%, 7%); // main background
+$darkDesaturatedBlue: hsl(244, 38%, 16%); // card background
+$softViolet: hsl(277, 64%, 61%); // accent
+$white: hsl(0, 0%, 100%); // main heading, stats
+$slightTransparentWhite: hsla(0, 0%, 100%, 0.75); // main paragraph
+$slighterTransparentWhite: hsla(0, 0%, 100%, 0.6); // stat headings
+$inter: 'Inter', sans-serif; // Weights: 400, 700
+$lexendDeca: 'Lexend Deca', sans-serif; // Weights: 400
+
+// Mixin
+@mixin pad {
+	@media (max-width: 1100px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (max-width: 500px) {
+		@content;
+	}
+}
+
+// My CSS
+* {
+    box-sizing: border-box;
+    // outline: 1px solid red;
+}
+
+body {
+	background: $veryDarkBlue;
+	font-family: $inter;
+	font-size: 15px;
+}
+
+.wrap {
+	max-width: 1120px;
+	padding: 20px;
+	margin: 80px auto;
+	@include pad {
+		margin: 0 auto;
+	}
+}
+
+.card {
+	background: $darkDesaturatedBlue;
+	max-width: 1080px;
+	margin: 0 auto;
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row-reverse;
+	@include pad {
+		display: block;
+	}
+}
+
+.image {
+	width: 50%;
+	position: relative;
+	@include pad {
+		width: 100%;
+	}
+	.cover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: darken($softViolet, 25%);
+		opacity: .5;
+		z-index: 2;
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+	.img-desktop {
+		@include pad {
+			display: none;
+		}
+	}
+	.img-mobile {
+		display: none;
+		@include pad {
+			display: block;
+		}
+	}
+}
+
+.text {
+	width: 50%;
+	padding: 70px 80px 70px 70px;
+	line-height: 1.4;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	@include pad {
+		width: 100%;
+		padding: 32px;
+		text-align: center;
+	}
+	h1 {
+		font-weight: 700;
+		font-size: 35px;
+		color: #fff;
+		padding-bottom: 25px;
+		@include pad {
+			font-size: 28px;
+		}
+		span {
+			color: $softViolet;
+		}
+	}
+}
+
+.paragraph {
+	color: $slightTransparentWhite;
+	@include pad {
+		margin-bottom: 40px;
+	}
+}
+
+.numbers {
+	display: flex;
+	@include mobile {
+		display: block;
+	}
+	li {
+		flex: 1;
+		@include mobile {
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.number {
+	color: #fff;
+	font-size: 26px;
+	font-weight: 700;
+}
+
+.statHeading {
+	font-family: $lexendDeca;
+	color: $slighterTransparentWhite;
+	text-transform: uppercase;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+	color: #8843F2;
+	padding-top: 50px;
+	a {
+		// color: $softViolet;
+		color: #F9D371;
+	}
+}

@@ -1,0 +1,241 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #090b1a;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+.wrap {
+  max-width: 1120px;
+  padding: 20px;
+  margin: 80px auto;
+}
+
+@media (max-width: 1100px) {
+  .wrap {
+    margin: 0 auto;
+  }
+}
+
+.card {
+  background: #1b1938;
+  max-width: 1080px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (max-width: 1100px) {
+  .card {
+    display: block;
+  }
+}
+
+.image {
+  width: 50%;
+  position: relative;
+}
+
+@media (max-width: 1100px) {
+  .image {
+    width: 100%;
+  }
+}
+
+.image .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #6a2197;
+  opacity: .5;
+  z-index: 2;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .image .img-desktop {
+    display: none;
+  }
+}
+
+.image .img-mobile {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .image .img-mobile {
+    display: block;
+  }
+}
+
+.text {
+  width: 50%;
+  padding: 70px 80px 70px 70px;
+  line-height: 1.4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1100px) {
+  .text {
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+  }
+}
+
+.text h1 {
+  font-weight: 700;
+  font-size: 35px;
+  color: #fff;
+  padding-bottom: 25px;
+}
+
+@media (max-width: 1100px) {
+  .text h1 {
+    font-size: 28px;
+  }
+}
+
+.text h1 span {
+  color: #aa5cdb;
+}
+
+.paragraph {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 1100px) {
+  .paragraph {
+    margin-bottom: 40px;
+  }
+}
+
+.numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  .numbers {
+    display: block;
+  }
+}
+
+.numbers li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media (max-width: 500px) {
+  .numbers li {
+    margin-bottom: 20px;
+  }
+  .numbers li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.number {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.statHeading {
+  font-family: "Lexend Deca", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #8843F2;
+  padding-top: 50px;
+}
+
+.attribution a {
+  color: #F9D371;
+}
+/*# sourceMappingURL=style.css.map */
