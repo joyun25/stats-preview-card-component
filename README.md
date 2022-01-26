@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/joyun25/stats-preview-card-component-main)
-- Live Site URL: [Github Page](https://joyun25.github.io/stats-preview-card-component-main/)
+- Solution URL: [Github](https://github.com/joyun25/stats-preview-card-component)
+- Live Site URL: [Github Page](https://joyun25.github.io/stats-preview-card-component/)
 
 ### Built with
 
